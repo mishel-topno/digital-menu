@@ -22,7 +22,7 @@
 
 .categoryItem{
     flex: 1 ;
-    margin:40px 85px;
+    margin:10px;
     padding: 45px;
     
     cursor: pointer;
