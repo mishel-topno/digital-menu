@@ -1,13 +1,10 @@
 .App {
   text-align: center;
   margin-top: 0px;
-  background-color: #d7b58d;
-
+  /* background-color: #a50404; */
 }
-.container{
+.container {
   display: flex;
   margin-left: 0px;
   padding-left: 0px;
-  
 }
-

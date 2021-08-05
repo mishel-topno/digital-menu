@@ -1,59 +1,81 @@
+import { Button,Image,Card } from 'react-bootstrap';
 import React from 'react'
+import { useHistory } from "react-router-dom";
+import { createBrowserHistory as history } from 'history';
 import "./category.css"
-export default function Category() {
+import { Component } from 'react';
+import Topbar from '../topbar/Topbar'
+ 
+
+ const Category = () => {
+   
+  const history = useHistory();
+
     return (
-        <div className="category">
-            <div className="categoryItem">
-                   <span className="categoryTitle">
-                       Pizza
-                   </span>
-            </div>
-            <div className="categoryItem">
-               <span className="categoryTitle">Burger
-               </span>
-            </div>
-            <div className="categoryItem">
-               <span className="categoryTitle">Sandwich
-               </span>
-            </div>
-            <div className="categoryItem">
-               <span className="categoryTitle">Shakes
-               </span>
-            </div>
-            <div className="categoryItem">
-               <span className="categoryTitle">Cold Coffee
-               </span>
-            </div>
-            <div className="categoryItem">
-               <span className="categoryTitle">Hot Beverages
-               </span>
-            </div>
-            <div className="categoryItem">
-               <span className="categoryTitle">Mojito
-               </span>
-            </div>
-         
-          
-        </div>
+
+      <div>
+        <Topbar/>
         
-      /*<div className="container">
-        <div className="row">
-           <div className="col">Pizza</div>
-           <div className="col">Burger</div>
-        </div>
-        
-        <div className="row">
-           <div className="col">Sandwich</div>
-           <div className="col">Shakes</div>
-        </div>
-        <div className="row">
-           <div className="col">Cold Drink</div>
-           <div className="col">Hot Beverages</div>
-        </div>
-        <div className="row">
-           <div className="col">Mojito</div>
-           <div className="col">Nullll</div>
-        </div>
-      </div>*/
-    )
+          <div className="Container1">
+            <div className="card" onClick={()=>history.push('/Pizza')}>
+              <div className="imgbx">
+                <img src="./img/pizza.png"/>
+              </div>
+              <div className="content">
+                <h2>Pizza</h2>
+              </div>
+            </div>
+            <div className="card" onClick={()=>history.push('/Burger')}>
+              <div className="imgbx">
+                <img src="./img/pizza.png"/>
+              </div>
+              <div className="content">
+                <h2>Burger</h2>
+              </div>
+            </div>
+            <div className="card" onClick={()=>history.push('/Sandwich')}>
+              <div className="imgbx">
+                <img src="./img/pizza.png"/>
+              </div>
+              <div className="content">
+                <h2>Sandwich</h2>
+              </div>
+            </div>
+            <div className="card" onClick={()=>history.push('/Mojito')}>
+              <div className="imgbx">
+                <img src="./img/pizza.png"/>
+              </div>
+              <div className="content">
+                <h2>Mojito</h2>
+              </div>
+            </div>
+            <div className="card" onClick={()=>history.push('/Coldcoffee')}>
+              <div className="imgbx">
+                <img src="./img/pizza.png"/>
+              </div>
+              <div className="content">
+                <h2>Cold Coffee</h2>
+              </div>
+            </div>
+            <div className="card" onClick={()=>history.push('/Shakes')}>
+              <div className="imgbx">
+                <img src="./img/pizza.png"/>
+              </div>
+              <div className="content">
+                <h2>Shakes</h2>
+              </div>
+            </div>
+            <div className="card" onClick={()=>history.push('/HotBeverages')}>
+              <div className="imgbx">
+                <img src="./img/pizza.png"/>
+              </div>
+              <div className="content">
+                <h2>Hot Beverages</h2>
+              </div>
+            </div>
+          </div>
+      </div>
+  )
 } 
+
+export default Category;
